@@ -1,0 +1,3 @@
+url: http://localhost:25601
+tunnel: 77882402-5cc6-4174-97aa-3b52932285ff
+credentials-file: /home/container/.cloudflared/77882402-5cc6-4174-97aa-3b52932285ff.json
