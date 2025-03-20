@@ -7,7 +7,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname))); // Serve static files
+
+// **WICHTIG:** Statische Dateien *vor* allen anderen Routen ausliefern!
+app.use(express.static(path.join(__dirname)));
 
 // Verwende /tmp für beschreibbare Dateien in Vercel
 const DATA_DIR = '/tmp';
