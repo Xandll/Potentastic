@@ -12,6 +12,18 @@
     {
       "src": "leaderboard.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "script.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "style.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "favicon.png",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
