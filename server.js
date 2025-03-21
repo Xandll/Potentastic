@@ -92,7 +92,7 @@ app.get('/', (req, res) => {
 });
 
 // Endpoint zum Speichern eines neuen Scores
-app.post('/save-score', async (req, res) => {
+app.post('/api/save-score', async (req, res) => {
   try {
     const { username, time, date, mode } = req.body;
     console.log('\n=== Save Score Request ===');
@@ -145,7 +145,7 @@ app.post('/save-score', async (req, res) => {
 });
 
 // Endpoint zum Abrufen des Leaderboards
-app.get('/leaderboard', async (req, res) => {
+app.get('/api/leaderboard', async (req, res) => {
   try {
     const mode = req.query.mode;
     console.log('\n=== Leaderboard Request ===');
@@ -193,7 +193,7 @@ app.get('/leaderboard', async (req, res) => {
   }
 });
 
-app.get('/leaderboard.html', (req, res) => {
+app.get('/api/leaderboard.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'leaderboard.html'));
 });
 
