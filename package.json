@@ -1,14 +1,15 @@
 {
-  "name": "potentastic-server",
+  "name": "potentastic",
   "version": "1.0.0",
-  "description": "Server for Potentastic game",
-  "main": "server.js",
+  "description": "Potentastic game using Next.js",
   "scripts": {
-    "start": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "cloudflared": "^0.6.0",
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "next": "^13.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
