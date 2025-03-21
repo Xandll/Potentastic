@@ -1,0 +1,131 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  max-width: 700px;            /* increased from 500px */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  min-height: auto;            /* revert from full viewport height */
+  background: rgba(52, 73, 94, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  animation: fadeIn 0.5s ease-out;
+  margin-top: 50px;            /* adds space at top */
+}
+
+.startScreen {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.startScreen input {
+  font-size: 16px;
+  height: 44px;
+  padding: 0 12px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid rgba(52, 152, 219, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.startScreen select {
+  font-size: 16px;
+  height: 44px;
+  padding: 0 12px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid rgba(52, 152, 219, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6'%3E%3Cpath fill='%23666' d='M0 0l6 6 6-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.startScreen button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.startScreen button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+.select {
+  appearance: none; /* Removes the default arrow */
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  background: rgba(255, 255, 255, 0.9); /* Light background for better readability */
+  color: #2c3e50; /* Dark text color for contrast */
+  border: 2px solid rgba(52, 152, 219, 0.3);
+  border-radius: 8px;
+  padding: 0 12px; /* Matches the input padding */
+  height: 44px; /* Matches the input height */
+  margin: 5px 0; /* Matches the input margin */
+  width: 100%; /* Ensures it takes full width */
+  box-sizing: border-box;
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"%3E%3Cpath fill="%233498db" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px) center;
+  background-size: 12px;
+  padding-right: 32px; /* Ensures space for the arrow */
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* For better compatibility on older browsers */
+.select::-ms-expand {
+  display: none; /* Removes the default arrow for IE */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+    min-height: auto;
+  }
+}
+
+/* Landscape-Modus Anpassungen */
+@media (max-height: 500px) and (orientation: landscape) {
+  .container {
+    margin-bottom: 60px;
+  }
+
+  .startScreen {
+    padding: 10px 0;
+  }
+}
